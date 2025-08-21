@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Animación de Sprite</title>
+  <style>
+    canvas {
+      image-rendering: pixelated;
+      border: 2px solid black;
+      background-color: #222;
+      display: block;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+<canvas id="canvas" width="64" height="64"></canvas>
+
+<script>
+  const canvas = document.getElementById("canvas");
+  const ctx = canvas.getContext("2d");
+
+  // 👉 Cambiá esto por el nombre de tu archivo exportado desde Piskel
+  const spriteSheet = new Image();
+  spriteSheet.src = "sprite.png"; // debe estar en la misma carpeta
+
+  const frameWidth = 64;    // ancho de cada frame (según lo que exportaste)
+  const frameHeight = 64;   // alto de cada frame
+  const totalFrames = 4;    // cantidad de cuadros en la fila
+  let currentFrame = 0;
+
+  function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    ctx.drawImage(
+      spriteSheet,
+      currentFrame * frameWidth, 0,
+      frameWidth, frameHeight,
+      0, 0,
+      frameWidth, frameHeight
+    );
+
+    currentFrame = (currentFrame + 1) % totalFrames;
+    setTimeout(() => requestAnimationFrame(animate), 200); // velocidad
+  }
+
+  spriteSheet.onload = () => {
+    animate();
+  };
+</script>
+</body>
+</html>

@@ -1,27 +1,41 @@
+// -------------VARIABLES GLOBALES------------
+
 let ataqueJugador; // Variable global para guardar el ataque del jugador
 let ataqueEnemigo; // Variable global para guardar el ataque del enemigo
 let vidasJugador = 3;
 let vidasEnemigo = 3;
 
+// Secciones
+let sectionSeleccionarAtaque = document.getElementById("seleccionar-ataque");
+let sectionReiniciar = document.getElementById("reiniciar");
+let sectionMensaje = document.getElementById("mensajes");
+
+// Botones
+let botonPunio = document.getElementById("boton-punio");
+let botonPatada = document.getElementById("boton-patada");
+let botonBarrida = document.getElementById("boton-barrida");
+
+// ---------------FUNCIONES----------------------
+
 function iniciarJuego() {
-  let sectionSeleccionarAtaque = document.getElementById("seleccionar-ataque");
+  //let sectionSeleccionarAtaque = document.getElementById("seleccionar-ataque");
   sectionSeleccionarAtaque.style.display = "none";
 
   let botonPersonajeJugador = document.getElementById("boton-personaje");
   botonPersonajeJugador.addEventListener("click", seleccionarPersonajeJugador);
 
-  let sectionReiniciar = document.getElementById("reiniciar");
+  //let sectionReiniciar = document.getElementById("reiniciar");
   sectionReiniciar.style.display = "none";
 
   let botonReglasJuego = document.getElementById("boton-reglas");
   botonReglasJuego.addEventListener("click", reglasDelJuego);
 
   //Creamos un escuchar eventos
-  let botonPunio = document.getElementById("boton-punio");
+  //let botonPunio = document.getElementById("boton-punio");
   botonPunio.addEventListener("click", ataquePunio);
-  let botonPatada = document.getElementById("boton-patada");
+  //let botonPatada = document.getElementById("boton-patada");
   botonPatada.addEventListener("click", ataquePatada);
-  let botonBarrida = document.getElementById("boton-barrida");
+  //let botonBarrida = document.getElementById("boton-barrida");
   botonBarrida.addEventListener("click", ataqueBarrida);
 
   //Creamos una nueva variable boton reiniciar
@@ -39,7 +53,7 @@ function seleccionarPersonajeJugador() {
   let inputAang = document.getElementById("Aang");
   let inputToph = document.getElementById("Toph");
   let spanPersonajeJugador = document.getElementById("personaje-jugador");
-  let sectionSeleccionarAtaque = document.getElementById("seleccionar-ataque");
+  //let sectionSeleccionarAtaque = document.getElementById("seleccionar-ataque");
   //sectionSeleccionarAtaque.style.display = "block" //mostramos
   let sectionSeleccionarPersonaje = document.getElementById(
     "seleccionar-personaje"
@@ -170,10 +184,10 @@ function revisarVidas() {
 }
 
 function crearMensajeFinal(resultado) {
-  let sectionReiniciar = document.getElementById("reiniciar");
+  //let sectionReiniciar = document.getElementById("reiniciar");
   sectionReiniciar.style.display = "block"; //mostramos
 
-  let sectionMensaje = document.getElementById("mensajes");
+  //let sectionMensaje = document.getElementById("mensajes");
   let parrafo = document.createElement("p");
 
   parrafo.innerHTML = resultado;
@@ -181,16 +195,16 @@ function crearMensajeFinal(resultado) {
   sectionMensaje.appendChild(parrafo);
 
   //desbilitamos los botones de ataque
-  let botonPunio = document.getElementById("boton-punio");
+  //let botonPunio = document.getElementById("boton-punio");
   botonPunio.disabled = true;
-  let botonPatada = document.getElementById("boton-patada");
+  //let botonPatada = document.getElementById("boton-patada");
   botonPatada.disabled = true;
-  let botonBarrida = document.getElementById("boton-barrida");
+  //let botonBarrida = document.getElementById("boton-barrida");
   botonBarrida.disabled = true;
 }
 
 function crearMensaje(resultado) {
-  let sectionMensaje = document.getElementById("mensajes");
+  //let sectionMensaje = document.getElementById("mensajes");
   let parrafo = document.createElement("p");
 
   parrafo.innerHTML =

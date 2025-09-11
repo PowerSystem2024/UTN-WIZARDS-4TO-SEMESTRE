@@ -26,6 +26,11 @@ const botonBarrida = document.getElementById("boton-barrida");
 
 // ----------------- CLASE PERSONAJE -----------------
 // Clase que representa un personaje seleccionable en el jeugo
+// Esta clase define la estructura de cada personaje del juego con sus propiedades:
+// - nombre: el nombre del personaje (ej: Zuko, Katara, etc.)
+// - vidas: cantidad de vidas que tiene el personaje (inicialmente 3)
+// - ataques: array con los tipos de ataques disponibles (Punio, Patada, Barrida)
+// POO: Clase Personaje → Personaje (plantilla) → Constructor (inicializa) → Instancias (objetos) → Encapsulación (datos propios)
 class Personaje {
   constructor(nombre) {
     this.nombre = nombre;
@@ -36,6 +41,9 @@ class Personaje {
 
 // ----------------- INSTANCIAS DE PERSONAJES -----------------
 // Lista con los personajes disponibles para elejir
+// Se crean instancias de la clase Personaje para cada personaje de Avatar
+// Cada personaje tiene 3 vidas y puede usar los ataques: Punio, Patada, Barrida
+// Los personajes se crean como instancias de la clase Personaje
 const personajes = [
   new Personaje("Zuko"),
   new Personaje("Katara"),

@@ -9,7 +9,9 @@ let vidasEnemigo = 3;
 const sectionSeleccionarAtaque = document.getElementById("seleccionar-ataque");
 const sectionReiniciar = document.getElementById("reiniciar");
 const sectionMensaje = document.getElementById("mensajes");
-const sectionSeleccionarPersonaje = document.getElementById("seleccionar-personaje");
+const sectionSeleccionarPersonaje = document.getElementById(
+  "seleccionar-personaje"
+);
 // Referencia a elementos HTML que muestran el estado del juego
 const spanPersonajeJugador = document.getElementById("personaje-jugador");
 const spanPersonajeEnemigo = document.getElementById("personaje-enemigo");
@@ -24,6 +26,11 @@ const botonBarrida = document.getElementById("boton-barrida");
 
 // ----------------- CLASE PERSONAJE -----------------
 // Clase que representa un personaje seleccionable en el jeugo
+// Esta clase define la estructura de cada personaje del juego con sus propiedades:
+// - nombre: el nombre del personaje (ej: Zuko, Katara, etc.)
+// - vidas: cantidad de vidas que tiene el personaje (inicialmente 3)
+// - ataques: array con los tipos de ataques disponibles (Punio, Patada, Barrida)
+// POO: Clase Personaje → Personaje (plantilla) → Constructor (inicializa) → Instancias (objetos) → Encapsulación (datos propios)
 class Personaje {
   constructor(nombre) {
     this.nombre = nombre;
@@ -34,13 +41,16 @@ class Personaje {
 
 // ----------------- INSTANCIAS DE PERSONAJES -----------------
 // Lista con los personajes disponibles para elejir
+// Se crean instancias de la clase Personaje para cada personaje de Avatar
+// Cada personaje tiene 3 vidas y puede usar los ataques: Punio, Patada, Barrida
+// Los personajes se crean como instancias de la clase Personaje
 const personajes = [
   new Personaje("Zuko"),
   new Personaje("Katara"),
   new Personaje("Aang"),
   new Personaje("Toph"),
   new Personaje("Sokka"),
-  new Personaje("Azula")
+  new Personaje("Azula"),
 ];
 
 // ----------------- FUNCIONES -----------------
@@ -67,7 +77,7 @@ function iniciarJuego() {
 function generarInputsPersonajes() {
   // Limpia la sección antes de insertar los inputs
   sectionSeleccionarPersonaje.innerHTML = "<h2>Elige tu personaje</h2>";
-  
+
   //Recorre la lista de personaejs y genera inputs + lebels con imagenes
   personajes.forEach((personaje, index) => {
     const container = document.createElement("div");
@@ -82,7 +92,9 @@ function generarInputsPersonajes() {
     const label = document.createElement("label");
     label.setAttribute("for", personaje.nombre);
     label.innerHTML = `
-      <img src="assets/${personaje.nombre.toLowerCase()}.png" alt="${personaje.nombre}">
+      <img src="assets/${personaje.nombre.toLowerCase()}.png" alt="${
+      personaje.nombre
+    }">
       <span>${personaje.nombre}</span>
     `;
 
@@ -97,7 +109,9 @@ function generarInputsPersonajes() {
 
 function seleccionarPersonajeJugador() {
   //Busca el personajes elegido
-  const selectedInput = document.querySelector('input[name="personaje"]:checked');
+  const selectedInput = document.querySelector(
+    'input[name="personaje"]:checked'
+  );
 
   //Si no selleciono nada. muestra error temporal
   if (!selectedInput) {
@@ -195,8 +209,7 @@ function crearMensajeFinal(resultado) {
 function crearMensaje(resultado) {
   // Mensaje de cada ronda, que ataque hizo cada uno y el resultado
   const parrafo = document.createElement("p");
-  parrafo.innerHTML =
-    `Tu personaje atacó con ${ataqueJugador}, el personaje del enemigo atacó con ${ataqueEnemigo} ${resultado}`;
+  parrafo.innerHTML = `Tu personaje atacó con ${ataqueJugador}, el personaje del enemigo atacó con ${ataqueEnemigo} ${resultado}`;
   sectionMensaje.appendChild(parrafo);
 }
 

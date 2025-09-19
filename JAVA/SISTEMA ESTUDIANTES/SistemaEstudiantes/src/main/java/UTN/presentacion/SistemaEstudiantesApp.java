@@ -1,8 +1,7 @@
-package main.java.UTN.presentacion;
+package UTN.presentacion;
 
-import main.java.UTN.datos.EstudianteDAO;
-import main.java.UTN.dominio.Estudiante;
-import java.util.List;
+import UTN.datos.EstudianteDAO;
+import UTN.dominio.Estudiante;
 import java.util.Scanner;
 
 public class SistemaEstudiantesApp {
@@ -23,19 +22,17 @@ public class SistemaEstudiantesApp {
     }//Fin main
 
     private static void mostrarMenu(){
-        System.out.println("""
-            ╔══════════════════════════════════════╗
-            ║        SISTEMA DE ESTUDIANTES        ║
-            ╠══════════════════════════════════════╣
-            ║ 1. Listar estudiantes                ║
-            ║ 2. Buscar estudiante por ID          ║
-            ║ 3. Agregar estudiante                ║
-            ║ 4. Modificar estudiante              ║
-            ║ 5. Eliminar estudiante               ║
-            ║ 6. Salir                             ║
-            ╚══════════════════════════════════════╝
-            """);
-        System.out.print("Seleccione una opción: ");
+        System.out.println("==========================================");
+        System.out.println("        SISTEMA DE ESTUDIANTES");
+        System.out.println("==========================================");
+        System.out.println(" 1. Listar estudiantes");
+        System.out.println(" 2. Buscar estudiante por ID");
+        System.out.println(" 3. Agregar estudiante");
+        System.out.println(" 4. Modificar estudiante");
+        System.out.println(" 5. Eliminar estudiante");
+        System.out.println(" 6. Salir");
+        System.out.println("==========================================");
+        System.out.print("Seleccione una opcion: ");
     }
 
     private static boolean ejecutarOpciones(Scanner consola, EstudianteDAO estudianteDao){

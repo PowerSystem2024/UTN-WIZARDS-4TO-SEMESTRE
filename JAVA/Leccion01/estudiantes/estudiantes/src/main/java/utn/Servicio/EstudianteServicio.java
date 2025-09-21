@@ -32,7 +32,8 @@ public class EstudianteServicio implements IEstudianteServicio {
     // Implementación del método para buscar un estudiante por ID
     @Override
     public Estudiante buscarEstudiantePorId(Integer idEstudiante) {
-        return estudianteRepositorio.findById(idEstudiante).orElse(null);
+        Estudiante estudiante = estudianteRepositorio.findById(idEstudiante).orElse(null);
+        return estudiante;
     }
     
     // Implementación del método para guardar un estudiante

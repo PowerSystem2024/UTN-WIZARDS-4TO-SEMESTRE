@@ -137,9 +137,9 @@ public class EstudiantesApplication implements CommandLineRunner{
   private void mostrarMenu(){
     logger.info(nl);
     // Separadores visuales para hacer el menú más atractivo
-    logger.info("════════════════════════════════════════");
+    logger.info("========================================");
     logger.info("******* Sistema de Estudiantes *******");
-    logger.info("════════════════════════════════════════");
+    logger.info("========================================");
     
     // Opciones del menú principal
     logger.info(" 1. Listar Estudiantes");        // Mostrar todos los estudiantes
@@ -149,7 +149,7 @@ public class EstudiantesApplication implements CommandLineRunner{
     logger.info(" 5. Eliminar Estudiante");       // Borrar estudiante
     logger.info(" 6. Salir");                     // Terminar la aplicación
     
-    logger.info("════════════════════════════════════════");
+    logger.info("========================================");
     logger.info("Eliga una opción: ");              // Prompt para entrada del usuario
   }
   

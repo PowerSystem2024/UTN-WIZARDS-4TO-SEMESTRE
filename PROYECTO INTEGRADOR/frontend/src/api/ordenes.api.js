@@ -13,8 +13,11 @@ export const ordenesApi = {
   // Iniciar pago
   iniciarPago: (id) => cliente.post(`/ordenes/${id}/iniciar-pago`),
   
-  // Verificar estado del pago
-  verificarPago: (id) => cliente.post(`/ordenes/${id}/verificar-pago`),
+  // Verificar estado del pago (puede recibir payment_id en el body)
+  verificarPago: (id, body) => cliente.post(`/ordenes/${id}/verificar-pago`, body),
+  
+  // Verificar pago desde redirect de Mercado Pago (endpoint público, no requiere autenticación)
+  verificarPagoPublico: (id, body) => cliente.post(`/ordenes/${id}/verificar-pago-publico`, body),
   
   // Actualizar estado de orden
   actualizarEstado: (id, data) => cliente.patch(`/ordenes/${id}/estado`, data),

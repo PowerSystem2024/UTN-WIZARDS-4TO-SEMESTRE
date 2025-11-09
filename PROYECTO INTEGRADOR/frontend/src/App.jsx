@@ -3,6 +3,7 @@ import { useAuth } from './context/AuthContext.jsx'
 import ProtectedRoute from './components/ProtectedRoute.jsx'
 import Navbar from './components/layout/Navbar.jsx'
 import Footer from './components/layout/Footer.jsx'
+import myneblueImage from './assets/myneblue.png'
 
 // Páginas públicas
 import HomePage from './pages/HomePage.jsx'
@@ -36,10 +37,23 @@ function App() {
   const { isAuth } = useAuth()
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <Navbar />
-      <main className="flex-grow flex flex-col">
-        <Routes>
+    <div className="min-h-screen flex flex-col relative">
+      {/* Fondo de marca de agua */}
+      <div 
+        className="fixed inset-0 z-0 pointer-events-none opacity-10"
+        style={{
+          backgroundImage: `url(${myneblueImage})`,
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      />
+      
+      {/* Contenido principal con z-index para estar sobre el fondo */}
+      <div className="relative z-10 flex flex-col min-h-screen">
+        <Navbar />
+        <main className="flex-grow flex flex-col">
+          <Routes>
           {/* Rutas públicas - Accesibles para todos */}
             <Route path="/" element={<HomePage />} />
             <Route path="/productos" element={<ProductosPage />} />
@@ -58,6 +72,11 @@ function App() {
             <Route path="/reset-password" element={<ResetPasswordPage />} />
           </Route>
 
+          {/* Rutas de resultado de pago (públicas para permitir redirect desde Mercado Pago) */}
+          <Route path="/ordenes/:id/success" element={<OrdenSuccessPage />} />
+          <Route path="/ordenes/:id/failure" element={<OrdenFailurePage />} />
+          <Route path="/ordenes/:id/pending" element={<OrdenPendingPage />} />
+
           {/* Rutas protegidas (usuario autenticado) */}
           <Route element={<ProtectedRoute isAllowed={isAuth} redirectTo="/login" />}>
             <Route path="/perfil" element={<ProfilePage />} />
@@ -65,9 +84,6 @@ function App() {
             <Route path="/checkout" element={<CheckoutPage />} />
             <Route path="/ordenes" element={<OrdenesPage />} />
             <Route path="/ordenes/:id" element={<OrdenDetailPage />} />
-            <Route path="/ordenes/:id/success" element={<OrdenSuccessPage />} />
-            <Route path="/ordenes/:id/failure" element={<OrdenFailurePage />} />
-            <Route path="/ordenes/:id/pending" element={<OrdenPendingPage />} />
           </Route>
 
           {/* Rutas protegidas (admin) */}
@@ -85,6 +101,7 @@ function App() {
         </Routes>
       </main>
       <Footer />
+      </div>
     </div>
   )
 }

@@ -1,6 +1,6 @@
 # 📚 MyneBooks Store
 
-##Testeo de la app: 
+## Testeo de la app: 
 https://front-mynebooks-store-production.up.railway.app/
 
 ⚠️⚠️⚠️ RECORDAR QUE PARA HACER PAGOS SE DEBE USAR UN USUARIO DE PRUEBA DE MERCADO PAGO. 

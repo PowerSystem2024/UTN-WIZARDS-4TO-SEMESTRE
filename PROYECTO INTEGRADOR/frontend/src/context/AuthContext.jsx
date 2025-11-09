@@ -131,23 +131,132 @@ export function AuthProvider({ children }) {
   // Verificar autenticación al cargar
   useEffect(() => {
     const checkAuth = async () => {
-      if (Cookie.get("token")) {
+      // IMPORTANTE: No usar Cookie.get("token") porque las cookies están en el dominio del backend
+      // y js-cookie solo puede leer cookies del dominio actual (frontend).
+      // En su lugar, intentar getProfile() directamente - el navegador enviará las cookies
+      // automáticamente si están disponibles (con withCredentials: true).
+      
+      // Verificar si estamos en una ruta pública de pago o si venimos de una
+      const currentPath = window.location.pathname;
+      const isPublicPaymentRoute = 
+        currentPath.includes('/ordenes/') && 
+        (currentPath.includes('/success') || 
+         currentPath.includes('/failure') || 
+         currentPath.includes('/pending'));
+      
+      // Verificar si venimos de una ruta pública de pago (guardado en sessionStorage)
+      const cameFromPaymentRoute = sessionStorage.getItem('cameFromPaymentRoute') === 'true';
+      
+      // Limpiar el flag de sessionStorage
+      if (cameFromPaymentRoute) {
+        sessionStorage.removeItem('cameFromPaymentRoute');
+      }
+      
+      // Si venimos de una ruta pública de pago, agregar delay antes de verificar
+      // Esto da tiempo a que las cookies se establezcan correctamente después del redirect
+      const delay = (isPublicPaymentRoute || cameFromPaymentRoute) ? 1500 : 0;
+      
+      const verifySession = async () => {
         try {
+          // Intentar getProfile() directamente - el navegador enviará las cookies automáticamente
           const res = await authApi.getProfile();
           setUser(res.data);
           setIsAuth(true);
+          console.log("[AuthContext] ✅ Sesión verificada exitosamente");
         } catch (error) {
-          console.error("Error verificando autenticación:", error);
-          setUser(null);
-          setIsAuth(false);
-          Cookie.remove("token");
+          console.error("[AuthContext] Error verificando autenticación:", error);
+          console.error("[AuthContext] Detalles del error:", {
+            status: error.response?.status,
+            message: error.message,
+            code: error.code,
+            isPublicPaymentRoute,
+            cameFromPaymentRoute,
+          });
+          
+          // Si es un error 401, el token es inválido o no hay cookies
+          if (error.response?.status === 401) {
+            // Si venimos de una ruta pública de pago, NO limpiar inmediatamente
+            // Reintentar varias veces antes de limpiar (las cookies pueden tardar en establecerse)
+            if (isPublicPaymentRoute || cameFromPaymentRoute) {
+              console.log("[AuthContext] ⚠️ Error 401 después de volver de pago. Reintentando...");
+              // Reintentar hasta 3 veces con delays crecientes
+              const maxRetries = 3;
+              const attemptRetry = (attemptNumber) => {
+                if (attemptNumber > maxRetries) {
+                  console.log("[AuthContext] ❌ No hay sesión válida después de múltiples reintentos");
+                  setUser(null);
+                  setIsAuth(false);
+                  // No intentar remover cookie porque no podemos leerla desde aquí
+                  return;
+                }
+                
+                const retryDelay = 1000 * attemptNumber; // 1s, 2s, 3s
+                console.log(`[AuthContext] Reintento ${attemptNumber}/${maxRetries} en ${retryDelay}ms...`);
+                
+                setTimeout(async () => {
+                  try {
+                    const retryRes = await authApi.getProfile();
+                    setUser(retryRes.data);
+                    setIsAuth(true);
+                    console.log("[AuthContext] ✅ Sesión verificada exitosamente en reintento");
+                  } catch (retryError) {
+                    if (retryError.response?.status === 401) {
+                      // Intentar siguiente reintento
+                      attemptRetry(attemptNumber + 1);
+                    } else {
+                      console.warn("[AuthContext] ⚠️ Error temporal en reintento, manteniendo sesión");
+                      // Mantener isAuth como true para evitar redirecciones innecesarias
+                      setIsAuth(true);
+                    }
+                  }
+                }, retryDelay);
+              };
+              
+              // Iniciar primer reintento
+              attemptRetry(1);
+            } else {
+              // Si NO venimos de una ruta pública de pago, limpiar inmediatamente
+              console.log("[AuthContext] ❌ No hay sesión válida (401)");
+              setUser(null);
+              setIsAuth(false);
+            }
+          } else {
+            // Para otros errores (red, servidor, etc.), mantener el estado pero no marcar como autenticado
+            // Esto evita que el usuario sea redirigido al login por errores temporales
+            console.warn("[AuthContext] ⚠️ Error temporal verificando autenticación");
+            // No establecer isAuth como true, pero tampoco limpiar
+            // Intentar verificar nuevamente después de un breve delay
+            setTimeout(async () => {
+              try {
+                const retryRes = await authApi.getProfile();
+                setUser(retryRes.data);
+                setIsAuth(true);
+                console.log("[AuthContext] ✅ Sesión verificada exitosamente en reintento");
+              } catch (retryError) {
+                console.warn("[AuthContext] ⚠️ Reintento falló");
+                // Si sigue fallando, marcar como no autenticado
+                if (retryError.response?.status === 401) {
+                  setUser(null);
+                  setIsAuth(false);
+                }
+              }
+            }, 2000);
+          }
         }
+      };
+      
+      if (delay > 0) {
+        setTimeout(verifySession, delay);
+      } else {
+        verifySession();
       }
+      
       setLoading(false);
     };
     checkAuth();
   }, []);
 
+  // Exponer verifyAuth en el contexto
   return (
     <authContext.Provider
       value={{

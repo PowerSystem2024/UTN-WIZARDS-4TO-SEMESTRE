@@ -1,2 +1,9 @@
-# Ignorar toda la carpeta EJEMPLOS dentro de documentacion
-DOCUMENTACION/EJEMPLOS/
+# Node
+.env
+.env.*.local
+backend/.env
+frontend/.env
+
+# Logs, dist, etc.
+node_modules/
+dist/

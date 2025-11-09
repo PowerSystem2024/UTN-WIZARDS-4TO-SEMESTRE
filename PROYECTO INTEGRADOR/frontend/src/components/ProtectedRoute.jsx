@@ -16,7 +16,7 @@ const ProtectedRoute = ({ isAllowed, redirectTo = "/", requireAdmin = false }) =
   if (requireAdmin && isAuth) {
     const isAdmin = user?.rol === "admin" || user?.rol === "super_admin";
     if (!isAdmin) {
-      return <Navigate to="/" replace />;
+      return <Navigate to={redirectTo} replace />;
     }
   }
 

@@ -1,5 +1,11 @@
 # 📚 MyneBooks Store
 
+##Testeo de la app: 
+https://front-mynebooks-store-production.up.railway.app/
+
+⚠️⚠️⚠️ RECORDAR QUE PARA HACER PAGOS SE DEBE USAR UN USUARIO DE PRUEBA DE MERCADO PAGO. 
+⚠️⚠️⚠️ JAMAS USAR CUENTA PERSONAL EN ESTE LUGAR.
+
 **Tu tienda de libros y mangas favorita, desarrollada por otakus para otakus** 🎌✨
 
 [![Stack](https://img.shields.io/badge/Stack-PERN-blue)](https://github.com)

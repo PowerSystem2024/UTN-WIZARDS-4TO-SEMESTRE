@@ -220,7 +220,7 @@ const OrdenSuccessPage = () => {
 
             <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6">
               <p className="text-sm text-yellow-800">
-                El pago puede tardar unos minutos en procesarse. Te notificaremos por email cuando se complete.
+                El pago puede tardar unos minutos en procesarse. Te notificaremos por mail cuando se complete.
               </p>
             </div>
 

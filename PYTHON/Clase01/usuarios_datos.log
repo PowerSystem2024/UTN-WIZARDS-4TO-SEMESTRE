@@ -1,0 +1,128 @@
+01:27:08 AM:ERROR [conexion.py:40] Ocurrió un error al obtener el pool:  'utf-8' codec can't decode byte 0xf3 in position 79: invalid continuation byte
+01:31:19 AM:ERROR [conexion.py:40] Ocurrió un error al obtener el pool:  'utf-8' codec can't decode byte 0xf3 in position 79: invalid continuation byte
+01:32:24 AM:ERROR [conexion.py:40] Ha ocurrido un error al obtener el pool:  'utf-8' codec can't decode byte 0xf3 in position 79: invalid continuation byte
+01:35:21 AM:ERROR [conexion.py:40] Ha ocurrido un error al obtener el pool:  'utf-8' codec can't decode byte 0xf3 in position 79: invalid continuation byte
+01:35:46 AM:ERROR [conexion.py:40] Ha ocurrido un error al obtener el pool:  'utf-8' codec can't decode byte 0xf3 in position 79: invalid continuation byte
+09:13:24 PM:ERROR [conexion.py:40] Ha ocurrido un error al obtener el pool:  'utf-8' codec can't decode byte 0xf3 in position 79: invalid continuation byte
+10:07:32 PM:ERROR [conexion.py:40] Ha ocurrido un error al obtener el pool:  'utf-8' codec can't decode byte 0xf3 in position 79: invalid continuation byte
+10:12:08 PM:ERROR [conexion.py:41] Ha ocurrido un error al obtener el pool: 'utf-8' codec can't decode byte 0xf3 in position 79: invalid continuation byte
+10:12:17 PM:ERROR [conexion.py:41] Ha ocurrido un error al obtener el pool: 'utf-8' codec can't decode byte 0xf3 in position 79: invalid continuation byte
+10:27:58 PM:ERROR [conexion.py:40] Ha ocurrido un error al obtener el pool: 'utf-8' codec can't decode byte 0xf3 in position 79: invalid continuation byte
+10:30:54 PM:ERROR [conexion.py:41] Ha ocurrido un error al obtener el pool: 'utf-8' codec can't decode byte 0xf3 in position 79: invalid continuation byte
+10:31:24 PM:ERROR [conexion.py:41] Ha ocurrido un error al obtener el pool: 'utf-8' codec can't decode byte 0xf3 in position 79: invalid continuation byte
+07:51:50 PM:ERROR [conexion.py:41] Ha ocurrido un error al obtener el pool: 'utf-8' codec can't decode byte 0xf3 in position 79: invalid continuation byte
+08:09:37 PM:ERROR [conexion.py:41] Ha ocurrido un error al obtener el pool: 'utf-8' codec can't decode byte 0xf3 in position 79: invalid continuation byte
+08:44:37 PM:ERROR [conexion.py:41] Ha ocurrido un error al obtener el pool: 'utf-8' codec can't decode byte 0xf3 in position 79: invalid continuation byte
+08:44:54 PM:ERROR [conexion.py:41] Ha ocurrido un error al obtener el pool: 'utf-8' codec can't decode byte 0xf3 in position 79: invalid continuation byte
+08:47:41 PM:ERROR [conexion.py:41] Ha ocurrido un error al obtener el pool: 'utf-8' codec can't decode byte 0xf3 in position 79: invalid continuation byte
+09:54:17 PM:ERROR [conexion.py:41] Ha ocurrido un error al obtener el pool: 'utf-8' codec can't decode byte 0xf3 in position 79: invalid continuation byte
+09:54:50 PM:ERROR [conexion.py:41] Ha ocurrido un error al obtener el pool: 'utf-8' codec can't decode byte 0xf3 in position 79: invalid continuation byte
+10:04:29 PM:ERROR [conexion.py:41] Ha ocurrido un error al obtener el pool: 'utf-8' codec can't decode byte 0xf3 in position 79: invalid continuation byte
+10:05:37 PM:ERROR [conexion.py:41] Ha ocurrido un error al obtener el pool: 'utf-8' codec can't decode byte 0xf3 in position 79: invalid continuation byte
+10:14:17 PM:ERROR [conexion.py:46] Ha ocurrido un error al obtener el pool: 'utf-8' codec can't decode byte 0xf3 in position 79: invalid continuation byte
+10:15:05 PM:ERROR [conexion.py:46] Ha ocurrido un error al obtener el pool: 'utf-8' codec can't decode byte 0xf3 in position 79: invalid continuation byte
+11:15:56 PM:ERROR [conexion.py:40] Error al obtener el pool: 'utf-8' codec can't decode byte 0xf3 in position 85: invalid continuation byte
+11:29:04 PM:ERROR [conexion.py:50] Ha ocurrido un error al obtener el pool: 'utf-8' codec can't decode byte 0xf3 in position 79: invalid continuation byte
+11:39:16 PM:ERROR [conexion.py:41] Ha ocurrido un error al obtener el pool: UnicodeDecodeError('utf-8', b'connection to server at "127.0.0.1", port 5432 failed: FATAL:  la autentificaci\xf3n password fall\xf3 para el usuario \xabpostgres\xbb\n', 79, 80, 'invalid continuation byte')
+11:43:06 PM:ERROR [conexion.py:42] Ha ocurrido un error al obtener el pool: UnicodeDecodeError('utf-8', b'connection to server at "127.0.0.1", port 5432 failed: FATAL:  la autentificaci\xf3n password fall\xf3 para el usuario \xabpostgres\xbb\n', 79, 80, 'invalid continuation byte')
+11:44:00 PM:ERROR [conexion.py:42] Ha ocurrido un error al obtener el pool: UnicodeDecodeError('utf-8', b'connection to server at "127.0.0.1", port 5432 failed: FATAL:  la autentificaci\xf3n password fall\xf3 para el usuario \xabpostgres\xbb\n', 79, 80, 'invalid continuation byte')
+11:53:38 PM:INFO [menu_app_usuario.py:23] 
+            Id Usuario: 1,
+            Username: jperez,
+            Password: 123          
+        
+11:53:38 PM:INFO [menu_app_usuario.py:23] 
+            Id Usuario: 2,
+            Username: kgomez,
+            Password: 456          
+        
+11:54:12 PM:DEBUG [usuario_dao.py:32] Usuario insertado: 
+            Id Usuario: None,
+            Username: Rocio,
+            Password: 8021          
+        
+11:54:12 PM:INFO [menu_app_usuario.py:33] Usuarios insertados: 1
+11:54:15 PM:INFO [menu_app_usuario.py:23] 
+            Id Usuario: 1,
+            Username: jperez,
+            Password: 123          
+        
+11:54:15 PM:INFO [menu_app_usuario.py:23] 
+            Id Usuario: 2,
+            Username: kgomez,
+            Password: 456          
+        
+11:54:15 PM:INFO [menu_app_usuario.py:23] 
+            Id Usuario: 3,
+            Username: Rocio,
+            Password: 8021          
+        
+11:54:28 PM:DEBUG [usuario_dao.py:32] Usuario insertado: 
+            Id Usuario: None,
+            Username: carlos,
+            Password: 2324          
+        
+11:54:28 PM:INFO [menu_app_usuario.py:33] Usuarios insertados: 1
+11:54:40 PM:DEBUG [usuario_dao.py:32] Usuario insertado: 
+            Id Usuario: None,
+            Username: andres,
+            Password: 0411          
+        
+11:54:40 PM:INFO [menu_app_usuario.py:33] Usuarios insertados: 1
+11:55:11 PM:DEBUG [usuario_dao.py:40] Usuario actualizado: 
+            Id Usuario: 5,
+            Username: camila,
+            Password: 1404          
+        
+11:55:11 PM:INFO [menu_app_usuario.py:44] Usuarios actualizados: 1
+11:55:13 PM:INFO [menu_app_usuario.py:23] 
+            Id Usuario: 1,
+            Username: jperez,
+            Password: 123          
+        
+11:55:13 PM:INFO [menu_app_usuario.py:23] 
+            Id Usuario: 2,
+            Username: kgomez,
+            Password: 456          
+        
+11:55:13 PM:INFO [menu_app_usuario.py:23] 
+            Id Usuario: 3,
+            Username: Rocio,
+            Password: 8021          
+        
+11:55:13 PM:INFO [menu_app_usuario.py:23] 
+            Id Usuario: 4,
+            Username: carlos,
+            Password: 2324          
+        
+11:55:13 PM:INFO [menu_app_usuario.py:23] 
+            Id Usuario: 5,
+            Username: camila,
+            Password: 1404          
+        
+11:55:31 PM:DEBUG [usuario_dao.py:48] Usuario eliminado: 
+            Id Usuario: 4,
+            Username: None,
+            Password: None          
+        
+11:55:31 PM:INFO [menu_app_usuario.py:53] Usuarios eliminados: 1
+11:55:33 PM:INFO [menu_app_usuario.py:23] 
+            Id Usuario: 1,
+            Username: jperez,
+            Password: 123          
+        
+11:55:33 PM:INFO [menu_app_usuario.py:23] 
+            Id Usuario: 2,
+            Username: kgomez,
+            Password: 456          
+        
+11:55:33 PM:INFO [menu_app_usuario.py:23] 
+            Id Usuario: 3,
+            Username: Rocio,
+            Password: 8021          
+        
+11:55:33 PM:INFO [menu_app_usuario.py:23] 
+            Id Usuario: 5,
+            Username: camila,
+            Password: 1404          
+        

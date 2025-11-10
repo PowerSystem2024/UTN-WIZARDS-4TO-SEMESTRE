@@ -21,7 +21,7 @@ hola("Carlos", function(nombre){
 });
 
 // funcion recursiva
-function conversacion(nombre, vecesm callback){
+function conversacion(nombre, vecesm, callback){
     if (vaces > 0){
         Hablar(function(){
             conversacion(nombre, --vecesm, callback);

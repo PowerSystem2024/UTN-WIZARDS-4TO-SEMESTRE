@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="74a9d1c0-1a21-4dfe-9c3f-94d8c0e6192c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/tienda_libros/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tienda_libros/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tienda_libros/src/main/java/utn/tienda_libros/TiendaLibrosApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tienda_libros/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tienda_libros/src/test/java/utn/tienda_libros/TiendaLibrosApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tienda_libros/tienda_libros/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tienda_libros/tienda_libros/target/classes/logback-spring.xml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="34JRvXhpZyHzjAs8l0L6avogaj8" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.TiendaLibrosApplication.executor": "Run",
+    "Application.utn.tienda_libros.TiendaLibrosApplication.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW": "false",
+    "git-widget-placeholder": "florencia",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/feder/OneDrive/Desktop/2025/UTN-WIZARDS-4TO-SEMESTRE/JAVA/Leccion03/Tienda_Libro/src/tienda_libros/tienda_libros/src/main/java/utn/tienda_libros/vista",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\feder\OneDrive\Desktop\2025\UTN-WIZARDS-4TO-SEMESTRE\JAVA\Leccion03\Tienda_Libro\src\tienda_libros\tienda_libros\src\main\java\utn\tienda_libros\vista" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\feder\OneDrive\Desktop\2025\UTN-WIZARDS-4TO-SEMESTRE\JAVA\Leccion03\Tienda_Libro\src" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.TiendaLibrosApplication">
+    <configuration name="TiendaLibrosApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="tienda_libros.tienda_libros.src.main.java.utn.tienda_libros.TiendaLibrosApplication" />
+      <module name="Tienda_Libro" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tienda_libros.tienda_libros.src.main.java.utn.tienda_libros.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="utn.tienda_libros.TiendaLibrosApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="utn.tienda_libros.TiendaLibrosApplication" />
+      <module name="Tienda_Libro" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="utn.tienda_libros.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.TiendaLibrosApplication" />
+        <item itemvalue="Application.utn.tienda_libros.TiendaLibrosApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.20224.387" />
+        <option value="bundled-js-predefined-d6986cc7102b-410509235cf1-JavaScript-IU-242.20224.387" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="74a9d1c0-1a21-4dfe-9c3f-94d8c0e6192c" name="Changes" comment="" />
+      <created>1760929918525</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1760929918525</updated>
+      <workItem from="1760929919628" duration="442000" />
+      <workItem from="1760930371065" duration="159000" />
+      <workItem from="1760930541828" duration="95000" />
+      <workItem from="1760930643755" duration="1250000" />
+      <workItem from="1761002299480" duration="126000" />
+      <workItem from="1761002434215" duration="781000" />
+      <workItem from="1761003237787" duration="62000" />
+      <workItem from="1761003380358" duration="407000" />
+      <workItem from="1761003819025" duration="5458000" />
+      <workItem from="1761014712871" duration="34000" />
+      <workItem from="1761014921571" duration="830000" />
+      <workItem from="1761015770507" duration="546000" />
+      <workItem from="1761016327544" duration="860000" />
+      <workItem from="1761017203812" duration="146000" />
+      <workItem from="1761017431052" duration="3877000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

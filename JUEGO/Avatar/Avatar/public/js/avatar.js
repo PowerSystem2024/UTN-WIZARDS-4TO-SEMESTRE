@@ -40,7 +40,7 @@ const personajes = [
   new Personaje("Aang"),
   new Personaje("Toph"),
   new Personaje("Sokka"),
-  new Personaje("Azula")
+  new Personaje("Azula"),
 ];
 
 // ----------------- FUNCIONES -----------------

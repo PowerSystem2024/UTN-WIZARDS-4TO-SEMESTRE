@@ -43,7 +43,7 @@ function HomePage() {
       </main>
 
       <footer className="mt-8 text-gray-500 text-sm text-center">
-        © {new Date().getFullYear()} TaskManager — Proyecto académico UTN
+        © {new Date().getFullYear()} TaskManager — Proyecto académico UTN Wizards
       </footer>
     </div>
   </div>

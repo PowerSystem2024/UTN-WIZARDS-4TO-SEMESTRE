@@ -1,0 +1,46 @@
+01:25:00 PM:DEBUG [usuario_dao.py:19] seleccionando usuarios
+01:25:00 PM:INFO [menu_app_usuario.py:17] Usuario: 1jperez123
+01:27:16 PM:INFO [menu_app_usuario.py:38] Salimos de la aplicacion, hasta pronto!
+01:54:43 PM:DEBUG [usuario_dao.py:19] seleccionando usuarios
+01:54:43 PM:INFO [menu_app_usuario.py:17] Usuario: 1jperez123
+01:57:13 PM:DEBUG [usuario_dao.py:19] seleccionando usuarios
+01:57:13 PM:INFO [menu_app_usuario.py:17] Usuario: 1jperez123
+02:01:12 PM:DEBUG [usuario_dao.py:19] seleccionando usuarios
+02:01:12 PM:INFO [menu_app_usuario.py:17] Usuario: 1jperez123
+02:01:32 PM:DEBUG [usuario_dao.py:19] seleccionando usuarios
+02:01:32 PM:INFO [menu_app_usuario.py:17] Usuario: 1jperez123
+02:01:32 PM:INFO [menu_app_usuario.py:17] Usuario: 2kgomez456
+02:01:32 PM:INFO [menu_app_usuario.py:17] Usuario: 3Rocio8021
+02:01:32 PM:INFO [menu_app_usuario.py:17] Usuario: 5camila1404
+02:02:24 PM:DEBUG [usuario_dao.py:31] Usuario a insertar: Usuario: NoneSebastianz1212
+02:02:24 PM:INFO [menu_app_usuario.py:23] Usuario insertado: 1
+02:02:28 PM:DEBUG [usuario_dao.py:19] seleccionando usuarios
+02:02:28 PM:INFO [menu_app_usuario.py:17] Usuario: 1jperez123
+02:02:28 PM:INFO [menu_app_usuario.py:17] Usuario: 2kgomez456
+02:02:28 PM:INFO [menu_app_usuario.py:17] Usuario: 3Rocio8021
+02:02:28 PM:INFO [menu_app_usuario.py:17] Usuario: 5camila1404
+02:02:28 PM:INFO [menu_app_usuario.py:17] Usuario: 6Sebastianz1212
+02:02:55 PM:DEBUG [usuario_dao.py:39] Usuario a actualizar: Usuario: 6martin1212
+02:02:55 PM:INFO [menu_app_usuario.py:30] Usuario actualizado: 1
+02:02:58 PM:DEBUG [usuario_dao.py:19] seleccionando usuarios
+02:02:58 PM:INFO [menu_app_usuario.py:17] Usuario: 1jperez123
+02:02:58 PM:INFO [menu_app_usuario.py:17] Usuario: 2kgomez456
+02:02:58 PM:INFO [menu_app_usuario.py:17] Usuario: 3Rocio8021
+02:02:58 PM:INFO [menu_app_usuario.py:17] Usuario: 5camila1404
+02:02:58 PM:INFO [menu_app_usuario.py:17] Usuario: 6martin1212
+02:03:05 PM:DEBUG [usuario_dao.py:47] Usuario a eliminar: Usuario: 6NoneNone
+02:03:05 PM:INFO [menu_app_usuario.py:35] Usuario eliminado: 1
+02:03:06 PM:DEBUG [usuario_dao.py:19] seleccionando usuarios
+02:03:06 PM:INFO [menu_app_usuario.py:17] Usuario: 1jperez123
+02:03:06 PM:INFO [menu_app_usuario.py:17] Usuario: 2kgomez456
+02:03:06 PM:INFO [menu_app_usuario.py:17] Usuario: 3Rocio8021
+02:03:06 PM:INFO [menu_app_usuario.py:17] Usuario: 5camila1404
+02:03:10 PM:INFO [menu_app_usuario.py:38] Salimos de la aplicacion, hasta pronto!
+02:07:51 PM:DEBUG [usuario_dao.py:19] seleccionando usuarios
+02:07:51 PM:INFO [menu_app_usuario.py:17] ID: 1, Usuario: jperez, Contraseña: 123
+02:07:51 PM:INFO [menu_app_usuario.py:17] ID: 2, Usuario: kgomez, Contraseña: 456
+02:07:51 PM:INFO [menu_app_usuario.py:17] ID: 3, Usuario: Rocio, Contraseña: 8021
+02:07:51 PM:INFO [menu_app_usuario.py:17] ID: 5, Usuario: camila, Contraseña: 1404
+02:10:11 PM:DEBUG [usuario_dao.py:19] seleccionando usuarios
+02:10:34 PM:DEBUG [usuario_dao.py:31] Usuario a insertar: ID: None, Usuario: Marcos, Contraseña: 234784fgjiro
+02:10:49 PM:DEBUG [usuario_dao.py:47] Usuario a eliminar: ID: 6, Usuario: None, Contraseña: None
